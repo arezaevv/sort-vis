@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&display=swap');
+
+nav{
+    align-items: center;
+    background-color: #1a1b1d;
+    box-shadow: 0px 2px 7px black;
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    padding: 0 20px;
+    flex-direction: row-reverse;
+}
+
+nav .nav-brand{
+    
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Montserrat', 'sans-serif';
+    background: red;
+    background: -webkit-linear-gradient(left, #09c6f9,#045de9);
+    background: -o-linear-gradient(right, #09c6f9,#045de9);
+    background: -moz-linear-gradient(right, #09c6f9,#045de9);
+    background: linear-gradient(to right, #09c6f9,#045de9); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.toolbox{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.toolbox label{
+    color: white;
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', 'sans-serif';
+
+}
+
+.toolbox > div{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', 'sans-serif';
+
+}
+
+.toolbox button{
+    background-color: #111;
+    border-radius: 5px;
+    border: none;
+    color: #f1f1f1;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 10px;
+    outline: none;
+    padding: 13px 10px;
+    font-family: 'Montserrat', 'sans-serif';
+    transition: all 0.7s ease 0s;
+}
+
+
+.toolbox .randomize:disabled:hover{
+    background-color: #ff6961;
+}
+.toolbox .randomize:disabled {
+    background-color: #055975;
+    color: #696969;
+}
+.toolbox .randomize:enabled:hover {
+    background-color: #50a853;
+}
+
+
+/* Credits to Kocsten for the awesome button styling */
+/* https://dev.to/webdeasy/top-20-css-buttons-animations-f41 */
+.toolbox .glow-on-hover {
+    width: 190px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.toolbox .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.toolbox .glow-on-hover:active {
+    color: #000
+}
+
+.toolbox .glow-on-hover:active:after {
+    background: transparent;
+}
+
+.toolbox .glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.toolbox .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.toolbox .glow-on-hover:enabled:hover{
+    color: #50a853;
+}
+.toolbox .glow-on-hover:disabled {
+    color: #696969;
+}
+
+.toolbox .glow-on-hover:disabled:hover {
+    color: #ff6961;
+
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.toolbox .randomize {
+    width: 190px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.toolbox .randomize:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.toolbox .randomize:active {
+    color: #000
+}
+
+.toolbox .randomize:active:after {
+    background: transparent;
+}
+
+.toolbox .randomize:hover:before {
+    opacity: 1;
+}
+
+.toolbox .randomize:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.toolbox .randomize:disabled:hover{
+    color: #ff6961;
+}
+.toolbox .randomize:enabled:hover {
+    color: #50a853;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.toolbox .selecter {
+    width: 190px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.toolbox .selecter:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;   
+}
+
+.toolbox .selecter:active {
+    color: #000;
+}
+
+.toolbox .selecter:active:after {
+    background: transparent;
+}
+
+.toolbox .selecter:hover:before {
+    opacity: 1;
+}
+
+.toolbox .selecter:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.toolbox .selecter:disabled {
+    color: #696969;
+}
+
+.toolbox .selecter:enabled:hover{
+    color: #50a853;
+}
+
+.toolbox .selecter:disabled:hover {
+    color: #ff6961;
+
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.toolbox select, input[type='range']{
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.toolbox input, select, button{
+    min-width: 150px;
+}
+
+.toolbox select {
+    background: #111;
+    border-radius: 5px;
+    border: none;
+    color: #f1f1f1;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 5px 5px;
+    font-family: 'Montserrat', 'sans-serif';
+    transition: all 0.7s ease 0s;
+}
+
+@media(max-width: 992px){
+    nav{
+        flex-direction: column;
+    }
+
+    .toolbox{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .toolbox > div{
+        margin: 10px 0;
+    }
+}
